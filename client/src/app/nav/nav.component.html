@@ -1,10 +1,26 @@
 <header>
   <div class="logo">
-    <img class="face" src="../../assets/images/redditFace.svg" alt="">
-    <img class="text" src="../../assets/images/redditText.svg" alt="">
+    <img class="face" src="../../assets/images/redditFace.svg" alt="" />
+    <img class="text" src="../../assets/images/redditText.svg" alt="" />
   </div>
   <div class="search">
     <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-    <input id="search" type="search" placeholder="Search Reddit">
+    <input id="search" type="search" placeholder="Search Reddit" />
+  </div>
+  <div class="auth-btns">
+    <button class="login-btn">Log In</button>
+    <button class="signup-btn">Sign In</button>
+  </div>
+  <div class="drop-down" clickOutside (clickOutside)="clickedOutside()">
+    <div (click)="toggleMenu()" class="drop-down-btn">
+      <i class="fa-solid fa-user"></i>
+      <i class="fa-solid fa-caret-down"></i>
+    </div>
+    <div class="menu" *ngIf="isMenuOpen">
+      <div class="item">Dark Mode</div>
+      <div class="item">Help Centre</div>
+      <div class="item">Terms & Policies</div>
+      <div class="item">Log In / Sign Up</div>
+    </div>
   </div>
 </header>

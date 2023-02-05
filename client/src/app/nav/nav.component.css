@@ -23,6 +23,7 @@ header {
   align-items: center;
   position: relative;
   flex-grow: 1;
+  margin: 0 64px;
 }
 
 .search label {
@@ -53,9 +54,90 @@ header {
   border-color: #1484d6;
 }
 
+.auth-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-btns button {
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 60px;
+  margin-right: 8px;
+  padding: 0 32px;
+  font-weight: 700;
+  font-size: 10pt;
+  height: 30px;
+}
+
+.signup-btn {
+  color: #0079d3;
+  background: #fff;
+  border: 1px solid #0079d3;
+}
+
+.signup-btn:hover {
+  background-color: #f5fafd;
+}
+
+.login-btn {
+  color: #fff;
+  background: #0079d3;
+  border: 1px solid #0079d3;
+}
+
+.login-btn:hover {
+  background-color: #1484d6;
+}
+
+.drop-down{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.drop-down-btn {
+  padding: 4px 10px;
+  border: 1px solid #fff;
+}
+
+.drop-down-btn:hover {
+  border: 1px solid #edeff1;
+}
+
+.drop-down i {
+  color: #949698;
+  font-size: 18px;
+  padding-left: 4px;
+}
+
+.menu {
+  position: absolute;
+  background-color: #fff;
+  top: 34px;
+  right: 0;
+  width: max-content;
+}
+
+.item {
+  padding: 12px;
+}
+
+.item:hover {
+  background-color: #0079d3;
+  color: #fff;
+}
+
 
 @media(max-width:480px){
   .text {
+    display: none;
+  }
+
+  .auth-btns {
     display: none;
   }
 }
