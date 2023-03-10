@@ -17,10 +17,24 @@
       <i class="fa-solid fa-caret-down"></i>
     </div>
     <div class="menu" *ngIf="isMenuOpen">
-      <div class="item">Dark Mode</div>
-      <div class="item">Help Centre</div>
-      <div class="item">Terms & Policies</div>
-      <div class="item">Log In / Sign Up</div>
+      <div class="item">
+        <i class="fa-solid fa-moon"></i> Dark Mode
+        <input
+          id="darkMode"
+          type="checkbox"
+          [checked]="isDarkTheme"
+          (change)="toggleDarkTheme($event)"
+        />
+      </div>
+      <div class="item">
+        <i class="fa-solid fa-circle-info"></i> Help Centre
+      </div>
+      <div class="item">
+        <i class="fa-solid fa-scroll"></i> Terms & Policies
+      </div>
+      <div class="item">
+        <i class="fa-solid fa-right-to-bracket"></i>Log In / Sign Up
+      </div>
     </div>
   </div>
 </header>

@@ -1,6 +1,6 @@
 header {
   display: flex;
-  background-color: #fff;
+  background-color: var(--white-color);
   height: 44px;
   padding: 6px 12px;
 }
@@ -8,6 +8,7 @@ header {
 .logo {
   display: flex;
   align-items: center;
+  margin-left: 40px;
 }
 
 .face {
@@ -21,20 +22,28 @@ header {
 .search {
   display: flex;
   align-items: center;
-  position: relative;
+  justify-content: center;
   flex-grow: 1;
   margin: 0 64px;
 }
 
 .search label {
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   font-size: 16px;
   color: #757575;
   padding-left: 10px;
 }
 
+.search label i {
+  position: absolute;
+  left: 16px;
+}
+
 .search input {
-  width: 100%;
+  width: 60%;
   height: 34px;
   font-size: 10pt;
   background-color: #f6f7f8;
@@ -95,13 +104,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  margin-right: 40px;
   position: relative;
 }
 
 .drop-down-btn {
   padding: 4px 10px;
   border: 1px solid #fff;
+  display: flex;
 }
 
 .drop-down-btn:hover {
@@ -120,10 +130,15 @@ header {
   top: 34px;
   right: 0;
   width: max-content;
+  border-radius: 5px;
 }
 
 .item {
   padding: 12px;
+}
+
+.item i {
+  margin-right: 12px;
 }
 
 .item:hover {
@@ -131,8 +146,13 @@ header {
   color: #fff;
 }
 
+@media(max-width: 1200px){
+  .search input {
+    width: 80%;
+  }
+}
 
-@media(max-width:480px){
+@media(max-width:840px){
   .text {
     display: none;
   }
@@ -141,3 +161,4 @@ header {
     display: none;
   }
 }
+
